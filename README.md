@@ -154,7 +154,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
    1. Creating a Pipeline
       * Firstly the AutoML run configuration is created using `AutoMLConfig`. 
       * Then a pipeline is created using the `Pipeline` class, imported as follows: ```from azureml.pipeline.core import Pipeline```.
-      * The Pipeline ic created using the `AutoMLStep` where the actual AutoML run step takes place and the experiment is submitted using the `pipeline_run` object.
+      * The Pipeline is created using the `AutoMLStep` where the actual AutoML run step takes place and the experiment is submitted using the `pipeline_run` object.
       * The image below shows that the pipeline has been created.
         
         ![Image of created pipeline](Images/pipeline_created.png)
@@ -165,14 +165,14 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
                
    1. Publishing a Pipeline
       * After retrieving the best model from the AutoMLStep run, a piepline is published to the workspace under the name `Bank Marketing Piepline` using Python SDK and Azure ML Studio. 
-      * The `publish_pipeline` objet is used to publish the created pipeline/
+      * The `publish_pipeline` objet is used to publish the created pipeline.
       * Publishing the pipeline enables a REST endpoint to rerun the pipeline from any HTTP library on any platform.      
       * The screenshot below shows the Pipeline Endpoint in the Pipelines Section of Azure ML Studio
         
         ![Image of Pipeline Endpoint](Images/pipeline_endpoint.png)
         
       * The screenshot below shows the RunWidget in the Jupyter Notebook of the Published Pipeline run.
-        ![Image of Run Widget Endpoint](Images/RunEidget.png)
+        ![Image of Run Widget Endpoint](Images/RunWidget.png)
         
       * The published pipeline and it's details can be viewed in Azure ML Studio of the published pipeline run in the designer.
       * The image below shows the Published Pipeline overview and the status of the endpoint.
@@ -188,3 +188,4 @@ TODO Provide a link to a screen recording of the project in action. Remember tha
 TODO (Optional): This is where you can provide information about any standout suggestions that you have attempted.
 * Used the Apache Benchmark tool to create a measure of accepted performance for the deployed model. This was an option step that was done in this experiment
 * In the future, rather than running an endpoint.py script to submit a request, a website or a similar interface can be created that can help user to enter input data for which the deployed model returns results. This can ensure a user friendly way for the users to consume and interact with the deployed model.
+* A Parallel Run Step can be used to create the pipeline.
