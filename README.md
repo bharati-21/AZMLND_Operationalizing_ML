@@ -14,27 +14,40 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       * This project uses a Bank Marketing Dataset from the USI Machine Learning Repository that conatins personal details about clients such as age, job, marital status, education, etc among other attributes.
       * The goal of the trained model is to predict whether or not a client will subscribe to a term deposit with the bank.
       * The data is classified using the column label y in the dataset that contains binary values ('yes' and 'no').
-      * The dataset is uploaded and registered to the Azure default datastore as a Tabular Dataset using the given [csv file].(https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv)
+      * The dataset is uploaded and registered to the Azure default datastore as a Tabular Dataset using the given [csv file].(https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv).
+      * Shown below is the image of the Registered dataset.
       ![Image of Registered Dataset](Images/BankMarketing_dataset.png)
+      * Shown below is the image of the Registered dataset's details.
       ![Image of Registered Dataset Details](Images/BankMarketing_dataset_details.png)
+      
    1. Confugirung a Compute Cluster
       * A compute cluster was configured to run the experiment with the name `compute-cluster`. The dedicated virtual machine size of the compute cluster was `STANDARD_DS12_V2`, with `1 minumum and 6 maximum number of nodes` and `CPU` Processing unit.
+      * Shown below is a screenshot of the computer cluster used in the experiment.
       ![Image of Compute Cluster](Images/Compute_Cluster.png)
+      * Shown below is the image of compute cluster's assigned configurations.
       ![Image of Compute Cluster Details](Images/Compute_Cluster_Details.png)
+      
    1. Submitting the autoML run
       * A new auto ML experiment was created with the name `bank-marketing-autoML`. The experiment task was `classification` with exit criteria as 1 hour and a concurrency of 5 runs. 
       * The best model out of all the tested algorithms was selected by AutoML using `Accuracy` as the primary metric.
       * Shown below is the image of the completed AutoML experiment with the best chosen algorithm as `VotingEnsemble` with an accuracy of `0.91958`.
+      * Shown below is the image of the completed AutoML experiment.
       ![Image of Completed AutoML Experiment](Images/AutoML_Completed.png)
+      * Shown below is a screenshot of the best model returned by the experiment.
       ![Image of Best Model](Images/Best_Model.png)
+      * Shown below is an image of the metrics of the best model returned by the AutoML experiment.
       ![Image of Best Model Metrics](Images/Best_Model_Metrics.png)
+      
 1. Deploy the best model
    * The best model was chosen as the `VotingEnsemble` Algorithm and deployed using _`Azure Container Instance (ACI)`_ with the name `bank-marketing-deploy`.
    * The `Authentication` option is enabled during deployment, authentication is enabled. Authentication is enabled to ensure unauthorized access and interaction with the deployed model.
    * After deploying the model using ACI, the deployement at hand is an interactive HTTP API Endpoint.
+   * Shown below is the list of real time dployed endpoint.
    ![Image of Real-time endpoints](Images/Real_Time_Endpoints.png)
-   ![Image of bank-marketing-deploy Deatils 1](Images/bank_marketin_deploy_details.png)
-   ![Image of bank-marketing-deploy Deatils 2](Images/bank_marketing_deploy_details2.png)
+   * Shown below is are images of the deployed model's details.
+   * ![Image of bank-marketing-deploy Deatils 1](Images/bank_marketin_deploy_details.png)   
+   * ![Image of bank-marketing-deploy Deatils 2](Images/bank_marketing_deploy_details2.png)
+   
 1. Enable logging
 1. Swagger Documentation
 1. Consume model endpoints
