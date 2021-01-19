@@ -122,15 +122,31 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
    * In this project the `endpoint.py` script is used to interact with the trained model. 
    * After modifying both the *scoring_uri* and the *key* to match the key for the service and the URI that was generated after model deployment, the script is run.
    * The script also contains sample data in JSON format that is used score and get back results from the endpoint.
-   * Shown below is the image of the `endpoint.py` run after modifying *scoring_uri* and the *key*.
+   * Shown below is the image of the output produced by `endpoint.py` run after modifying *scoring_uri* and the *key*.
    
      ![Image of endpoint.py run](Images/endpoint_py_run.png)
-     
-   * The scipt file sends a request to get the result for the sample data and also prints the response. Shown below is an image of the results obtained.
    
-     ![Image of request response](Images/response.png)
-
-
+   1. Benchmark
+      * A benchmark is used to create a baseline or acceptable performance measure. Benchmarking HTTP APIs is used to find the average response time for a deployed model.
+      * Apache Benchmark is an easy and popular tool for benchmarking HTTP services. It is used from the command line using the `ab` command.
+      * It creates a baseline by response times and failed requests, hence making it easy to identify and rectify error rates and slow responses from the deployed model.
+      * In this experiment the `benchmark.sh` is run to trugger the ab command. The command runs against the selected endpoint using the data.json file created by the same endpoint.py.
+      * ```
+          ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer SECRETKEY' http://URL.azurecontainer.io/score
+        ```
+      * The secret key is to be replaced by the `primary key` and the URL by the `REST URL`, both of which are provided under the *consume* section in the deployed endpoint.
+      * Below is the image that shows the `benchmark.sh` run and the output produced.
+      
+        ![Image of benchmark.sh run](Images/benchmark_sh_run.png)
+        
+      * The output produced by the run on the dpeloyed model is as follows:
+        1. Time per request (mean): 118.739 ms
+        1. Failed Requests: 0
+        1. Number of complete requests: 10
+      * Below is the image that shows the output for the benchmark run.
+      
+        ![Image of benchmark run ouput](Images/benchmark_sh_output.png)
+        
 1. Create and publish a pipeline
 
 ## Screen Recording
