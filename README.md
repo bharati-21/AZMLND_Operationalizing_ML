@@ -63,12 +63,11 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
    * In this experiment, application insights were enabled using the python SDK by running the following command ```service.update(enable_app_insights=True)```.
    * The image below shows the log output (which is the log ouput produced by the deployed model) after running `logs.py` file.
      
-     ![Image of log output](Images/log_py_run.png)
+     ![Image of log output](Images/logs_py_run.png)
      
    * Below are screenshots showing that the deployed model's application insights have been enabled.
    
-     ![Image of Application insights enabled true](Images/app_insights_enabled_one.png)
-     ![Image of Application insights enabled true](Images/app_insights_enabled_two.png)
+     ![Image of Application insights enabled true](Images/app_insights_enabled.png)
      
    * The image below shows _visual representation of application insights_ for the deployed model. The link to the site is given in properties section under `Appliation Insights URL`.
      
