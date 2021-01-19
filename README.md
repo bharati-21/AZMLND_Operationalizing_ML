@@ -18,6 +18,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       * Shown below are images of the Registered dataset and it's details.
       
   ![Image of Registered Dataset](Images/BankMarketing_dataset.png)
+  
   ![Image of Registered Dataset Details](Images/BankMarketing_dataset_details.png)
       
    1. Confugirung a Compute Cluster
@@ -25,6 +26,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       * Shown below are sreenshots of the computer cluster and the details of it's configurations used in the experiment.
       
   ![Image of Compute Cluster](Images/Compute_Cluster.png)
+  
   ![Image of Compute Cluster Details](Images/Compute_Cluster_Details.png)
       
    1. Submitting the autoML run
@@ -34,7 +36,9 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       * Shown below is the image of the completed AutoML experiment, best model and it's metrics returned by the run.
       
   ![Image of Completed AutoML Experiment](Images/AutoML_Completed.png)
+  
   ![Image of Best Model](Images/Best_Model.png)
+  
   ![Image of Best Model Metrics](Images/Best_Model_Metrics.png)
       
 1. Deploy the best model
@@ -44,7 +48,9 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
    * Shown below is the list of real time dployed endpoint and images of the deployed model's details.
    
   ![Image of Real-time endpoints](Images/Real_Time_Endpoints.png)
-  ![Image of bank-marketing-deploy Deatils 1](Images/bank_marketin_deploy_details.png)   
+  
+  ![Image of bank-marketing-deploy Deatils 1](Images/bank_marketin_deploy_details.png)
+  
   ![Image of bank-marketing-deploy Deatils 2](Images/bank_marketing_deploy_details2.png)
    
 1. Enable logging
