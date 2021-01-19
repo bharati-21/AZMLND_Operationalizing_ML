@@ -189,3 +189,7 @@ TODO (Optional): This is where you can provide information about any standout su
 * Used the Apache Benchmark tool to create a measure of accepted performance for the deployed model. This was an option step that was done in this experiment
 * In the future, rather than running an endpoint.py script to submit a request, a website or a similar interface can be created that can help user to enter input data for which the deployed model returns results. This can ensure a user friendly way for the users to consume and interact with the deployed model.
 * A Parallel Run Step can be used to create the pipeline.
+
+## References:
+1. [Microsoft Official Documentation for Azure ML](https://docs.microsoft.com/en-us/azure/machine-learning/)
+1. [Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program](https://classroom.udacity.com/nanodegrees/nd00333/parts/e0c51a58-32b4-4761-897b-92f6183148ac)
