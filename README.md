@@ -1,6 +1,27 @@
-# Operationalizing Machine Learning
+# OPERATIONALIZING MACHINE LEARNING 
 
-## Overview
+## TABLE OF CONTENTS
+1. [Overview](#overview)
+1. [Architectural Diagram](#architectural-diagram)
+1. [Key Steps](#key-steps)
+   1. [Authentication](#authentication)
+   1. [Automated ML Experiment](#automated-ml-experiment)
+      1. [Data Preparation](#data-preparation)
+      1. [Confugirung a Compute Cluster](#confugirung-a-compute-cluster)
+      1. [Submitting the autoML run](#submitting-the-automl-run)
+   1. [Deploy the best model](#deploy-the-best-model)
+   1. [Enable logging](#enable-logging)
+   1. [Swagger Documentation](#swagger-documentation)
+   1. [Consume model endpoints](#consume-model-endpoints)
+      1. [Benchmarking](#benchmarking)
+   1. [Create and publish a pipeline](#create-and-publish-a-pipeline)
+      1. [Creating a Pipeline](#creating-a-pipeline) 
+      1. [Publishing a Pipeline](#publishing-a-pipeline) 
+1. [Screen Recording](#screen-recording)
+1. [Standout Suggestions](#standout-suggestions)
+1. [References](#references)
+
+### Overview
 _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this project is to configure a cloud-based automated machine learning production model, deploy it, and consume it. The second part of the project deals with creating, publishing, and consuming a pipeline. Both the automated model as well as the pipeline uses the [Bank Marketing dataset](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
 
 ## Architectural Diagram
@@ -125,7 +146,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
    
      ![Image of endpoint.py run](Images/endpoint_py_run.png)
    
-   1. Benchmark
+   1. Benchmarking
       * A benchmark is used to create a baseline or acceptable performance measure. Benchmarking HTTP APIs is used to find the average response time for a deployed model.
       * Apache Benchmark is an easy and popular tool for benchmarking HTTP services. It is used from the command line using the `ab` command.
       * It creates a baseline by response times and failed requests, hence making it easy to identify and rectify error rates and slow responses from the deployed model.
