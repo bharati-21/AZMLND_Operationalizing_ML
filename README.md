@@ -18,7 +18,7 @@
       1. [Creating a Pipeline](#creating-a-pipeline) 
       1. [Publishing a Pipeline](#publishing-a-pipeline) 
 1. [Screen Recording](#screen-recording)
-1. [Standout Suggestions](#standout-suggestions)
+1. [Standout Suggestions and Future Work](#standout-suggestions-and-future-work)
 1. [References](#references)
 
 ### Overview
@@ -151,7 +151,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
 * A benchmark is used to create a baseline or acceptable performance measure. Benchmarking HTTP APIs is used to find the average response time for a deployed model.
 * Apache Benchmark is an easy and popular tool for benchmarking HTTP services. It is used from the command line using the `ab` command.
 * It creates a baseline by response times and failed requests, hence making it easy to identify and rectify error rates and slow responses from the deployed model.
-* In this experiment the `benchmark.sh` is run to trugger the ab command. The command runs against the selected endpoint using the data.json file created by the same endpoint.py.
+* In this experiment the `benchmark.sh` is run to trigger the ab command. The command runs against the selected endpoint using the data.json file created by the same endpoint.py.
 ```
    ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer SECRETKEY' http://URL.azurecontainer.io/score
 ```
@@ -205,13 +205,14 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
 
 
 ## Screen Recording
-TODO Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+[Link to Screen Recording](https://youtu.be/n8KRC_-M8G8)
 
-## Standout Suggestions
-TODO (Optional): This is where you can provide information about any standout suggestions that you have attempted.
+## Standout Suggestions and Future Work
 * Used the Apache Benchmark tool to create a measure of accepted performance for the deployed model. This was an option step that was done in this experiment
 * In the future, rather than running an endpoint.py script to submit a request, a website or a similar interface can be created that can help user to enter input data for which the deployed model returns results. This can ensure a user friendly way for the users to consume and interact with the deployed model.
-* A Parallel Run Step can be used to create the pipeline.
+* A Parallel Run Step can be used to create the pipeline instead of AutoMLStep.
+* Testing a local container with a downloaded model. 
+* Exporting the model to support ONNX. 
 
 ## References:
 1. [Microsoft Official Documentation for Azure ML](https://docs.microsoft.com/en-us/azure/machine-learning/)
