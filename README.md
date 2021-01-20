@@ -64,8 +64,8 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       
 ### *Deploy the Best model*
 * The best model was chosen as the `VotingEnsemble` Algorithm and deployed using _`Azure Container Instance (ACI)`_ with the name `bank-marketing-deploy`.
-* The `Authentication` option is enabled during deployment, authentication is enabled. Authentication is enabled to ensure unauthorized access and interaction with the deployed model.
-* After deploying the model using ACI, the deployement at hand is an interactive HTTP API Endpoint.
+* The `Authentication` option is enabled during deployment. Authentication is enabled to ensure unauthorized access and interaction with the deployed model.
+* The model deployed using ACI is an interactive HTTP API Endpoint.
 * Shown below is the list of real time dployed endpoint.
    
   ![Image of Real-time endpoints](Images/Real_Time_Endpoints.png)
@@ -79,7 +79,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
 * APPLICATION INSIGHTS:
   * Once a model is deployed, Application Insights and option to retrieve logs can be enabled.
   * Although this is configurable at the time of deploy, it can also be enabled post deployement using Python SDK ny running the `logs.py` command.
-  * Enabling application insights helps developers and DevOps professionals that can be used to:
+  * Enabling application insights helps developers and DevOps professionals and this feature can be used to:
     * Detect Anomalies
     * Use Powerful analytic tools to visualize performance
 * In this experiment, application insights were enabled using the python SDK by running the following command ```service.update(enable_app_insights=True)```.
@@ -87,7 +87,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
      
   ![Image of log output](Images/logs_py_run.png)
      
-* Below are screenshots showing that the deployed model's application insights have been enabled.
+* Below is a screenshot showing that the deployed model's application insights have been enabled.
    
   ![Image of Application insights enabled true](Images/app_insights_enabled.png)
      
@@ -131,7 +131,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       
     ![Image of HTTP GET method](Images/http_get.png)
         
-  * The **HTTP POST** request method us used to submit data to the endpoint. In the image shown below the POST method accepts JSON file as input and it also shows sample JSON input. 
+  * The **HTTP POST** request method is used to submit data to the endpoint. In the image shown below the POST method accepts JSON file as input and it also shows sample JSON input. 
       
     ![Image of HTTP POST method](Images/http_post.png)
 
