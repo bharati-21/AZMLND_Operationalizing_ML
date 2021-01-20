@@ -28,9 +28,9 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
 ![Image of Architecture](Images/AZMLND_Operationalizing_Pipelines_Architecture.png)
 
 ## Key Steps
-1. Authentication
+### Authentication
    * This was an optional step since this experiment was conducted using the lab provided by Udacity. This skipped step required a Service Principal account to be created and associate it with our specific workspace.
-1. Automated ML Experiment
+### Automated ML Experiment
    1. Data Preparation
       * This project uses a Bank Marketing Dataset from the USI Machine Learning Repository that conatins personal details about clients such as age, job, marital status, education, etc among other attributes.
       * The goal of the trained model is to predict whether or not a client will subscribe to a term deposit with the bank.
@@ -61,7 +61,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
         ![Image of Best Model](Images/Best_Model.png)
         ![Image of Best Model Metrics](Images/Best_Model_Metrics.png)
       
-1. Deploy the best model
+### Deploy the best model
    * The best model was chosen as the `VotingEnsemble` Algorithm and deployed using _`Azure Container Instance (ACI)`_ with the name `bank-marketing-deploy`.
    * The `Authentication` option is enabled during deployment, authentication is enabled. Authentication is enabled to ensure unauthorized access and interaction with the deployed model.
    * After deploying the model using ACI, the deployement at hand is an interactive HTTP API Endpoint.
@@ -74,7 +74,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
      ![Image of bank-marketing-deploy Deatils 1](Images/bank_marketin_deploy_details.png)
      ![Image of bank-marketing-deploy Deatils 2](Images/bank_marketing_deploy_details2.png)
    
-1. Enable logging
+### Enable logging
    * APPLICATION INSIGHTS:
      * Once a model is deployed, Application Insights and option to retrieve logs can be enabled.
      * Although this is configurable at the time of deploy, it can also be enabled post deployement using Python SDK ny running the `logs.py` command.
@@ -96,7 +96,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
      ![Image of application insights](Images/app_insights_two.png)
       
 
-1. Swagger Documentation
+### Swagger Documentation
    * WHAT IS SWAGGER?
      * `Swagger` is a tool provided by Azure that helps build, document, and consume RESTful web services, also known as `HTTP API`. 
      * It further explains what types of HTTP requests that an API can consume, like POST and GET, the inputs that the API accepts and what are the endpoints.
@@ -134,7 +134,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       
         ![Image of HTTP POST method](Images/http_post.png)
 
-1. Consume model endpoints
+### Consume model endpoints
    * The deployed model can be consumed via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests.
    * The `HTTP POST` is a common request method that is used to submit data. 
    * The `HTTP GET` is another method used to retrieve information from a URL. 
@@ -167,7 +167,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
       
         ![Image of benchmark run ouput](Images/benchmark_sh_output.png)
         
-1. Create and publish a pipeline
+### Create and Publish a Pipeline
    * Pipelines are a great way to automate ML workflows.
    * Published pipelines allow external services to interact with them so that they can do work more efficiently.
    * This section of the project deals with creating, publishing and interacting with the pipelines.
