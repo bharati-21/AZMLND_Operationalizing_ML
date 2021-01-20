@@ -6,20 +6,13 @@
 1. [Key Steps](#key-steps)
    1. [Authentication](#authentication)
    1. [Automated ML Experiment](#automated-ml-experiment)
-      1. [Data Preparation](#data-preparation)
-      1. [Confugirung a Compute Cluster](#confugirung-a-compute-cluster)
-      1. [Submitting the autoML run](#submitting-the-automl-run)
    1. [Deploy the best model](#deploy-the-best-model)
    1. [Enable logging](#enable-logging)
    1. [Swagger Documentation](#swagger-documentation)
    1. [Consume model endpoints](#consume-model-endpoints)
-      1. [Benchmarking](#benchmarking)
    1. [Create and Publish a Pipeline](#create-and-publish-a-pipeline)
-      1. [Creating a Pipeline](#creating-a-pipeline) 
-      1. [Publishing a Pipeline](#publishing-a-pipeline) 
 1. [Screen Recording](#screen-recording)
 1. [Standout Suggestions and Future Work](#standout-suggestions-and-future-work)
-1. [References](#references)
 
 ### Overview
 _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this project is to configure a cloud-based automated machine learning production model, deploy it, and consume it. The second part of the project deals with creating, publishing, and consuming a pipeline. Both the automated model as well as the pipeline uses the [Bank Marketing dataset](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
@@ -205,7 +198,7 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
 
 
 ## Screen Recording
-[Link to Screen Recording](https://youtu.be/n8KRC_-M8G8)
+[Link to Screen Recording](https://youtu.be/_taqyvLjFbU)
 
 ## Standout Suggestions and Future Work
 * Used the Apache Benchmark tool to create a measure of accepted performance for the deployed model. This was an option step that was done in this experiment
@@ -213,7 +206,3 @@ _This project is a part of the Udacity Azure ML Nanodegree._ The aim of this pro
 * A Parallel Run Step can be used to create the pipeline instead of AutoMLStep.
 * Testing a local container with a downloaded model. 
 * Exporting the model to support ONNX. 
-
-## References:
-1. [Microsoft Official Documentation for Azure ML](https://docs.microsoft.com/en-us/azure/machine-learning/)
-1. [Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program](https://classroom.udacity.com/nanodegrees/nd00333/parts/e0c51a58-32b4-4761-897b-92f6183148ac)
